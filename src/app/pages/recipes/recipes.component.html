@@ -1,12 +1,13 @@
 <div class="recipes-container">
   <h1 class="text-center text-danger title-recipes">Our recipes</h1>
-  <ng-container *ngIf="receipts.length === 0 then emptyArray; else notEmptyArray "></ng-container>
+  <ng-container *ngIf="receipts.length === 0 then emptyArray; else notEmptyArray"></ng-container>
 
   <ng-template #emptyArray>
     <div>
       <h1 class="text-center text-danger pt-5">No recipes found...</h1>
     </div>
   </ng-template>
+
   <ng-template #notEmptyArray>
     <div class="row px-4">
       <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let receipt of receipts">
