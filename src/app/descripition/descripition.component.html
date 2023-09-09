@@ -1,1 +1,39 @@
-<p>descripition works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let receipt of receipts">
+            <div class="card my-2">
+                <img class="card-img-top" [src]="receipt.imgsrc" alt="Card image cap" width="300px" height="250px">
+                <div class="card-body">
+                        <h5 class="card-title">{{receipt.title}}</h5>
+                        <p class="card-text">{{receipt.description}}</p>
+                        <button type="button" class="btn btn-info btn-lg" (click)="openModal(receipt)">Go description</button>
+                        <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': receipt.display}">
+                            <div class="modal-dialog modal-md" role="document">
+                                  <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">{{receipt.title}}</h4>
+                                            <button type="button" class="close" aria-label="Close" (click)="onCloseHandled(receipt)" style="background-color: red; color: white;">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                              
+                                            </div>
+                                   <div class="modal-body">
+                                             <img class="card-img-top" [src]="receipt.imgsrc" alt="Card image cap" width="300px" height="250px">
+                                              <p>{{receipt.description}}</p>
+                                              <div *ngFor="let i of receipt.Ingredients">
+                                                {{i}}
+                                              </div>
+                                              
+                                            </div>
+    
+                               </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+
