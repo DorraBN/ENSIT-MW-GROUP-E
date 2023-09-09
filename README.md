@@ -1,5 +1,19 @@
 # ENSITMWGROUPE
 
+## Demonstration
+### Home Page
+![Image Alt Text](./src/assets/homePage.PNG)
+![Image Alt Text](./src/assets/responsiveHomePage.PNG)
+
+### Recipes Page
+![Image Alt Text](./src/assets/recipesPage.PNG)
+![Image Alt Text](./src/assets/emptyArray.PNG)
+![Image Alt Text](./src/assets/recipeCard.PNG)
+![Image Alt Text](./src/assets/responsiveRecipesPage.PNG)
+
+### Not Found Page
+![Image Alt Text](./src/assets/notFoundPage.PNG)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server

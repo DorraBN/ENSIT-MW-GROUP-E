@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./acceuil.component.css']
 })
 export class AcceuilComponent {
+ 
 
+  
 }

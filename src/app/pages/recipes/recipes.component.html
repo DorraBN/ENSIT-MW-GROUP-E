@@ -1,0 +1,67 @@
+<div class="recipes-container">
+  <h1 class="text-center text-danger title-recipes">Our recipes</h1>
+  <ng-container *ngIf="receipts.length === 0 then emptyArray; else notEmptyArray "></ng-container>
+
+  <ng-template #emptyArray>
+    <div>
+      <h1 class="text-center text-danger pt-5">No recipes found...</h1>
+    </div>
+  </ng-template>
+  <ng-template #notEmptyArray>
+    <div class="row px-4">
+      <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let receipt of receipts">
+        <div class="card my-2">
+          <img class="card-img-top" [src]="receipt.imgsrc" alt="Card image cap" width="300px" height="250px">
+          <div class="card-body">
+            <div class="d-flex">
+              <h5 class="card-title">
+                {{receipt.id}}- {{receipt.title}} ({{receipt.origin}})
+              </h5>
+            </div>
+            <p class="card-text">{{receipt.description}}</p>
+            <button type="button" class="btn btn-warning w-100 text-light fw-bolder" (click)="openModal(receipt)">
+              Show details
+            </button>
+
+            <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': receipt.display}">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title text-danger">
+                      {{receipt.id}}- {{receipt.title}} ({{receipt.origin}})
+                    </h4>
+                    <button type="button" class="btn close bg-danger rounded text-light border border-light" aria-label="Close" (click)="onCloseHandled(receipt)">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container-modal">
+                      <div>
+                        <img class="card-img-top" [src]="receipt.imgsrc" alt="Card image cap">
+                      </div>
+                      <div>
+                        <p>
+                          <span class="fw-bolder text-warning">Description:</span>
+                           {{receipt.description}}
+                        </p>
+                        <span class="fw-bolder text-warning">Ingredient: </span>
+                        <div *ngFor="let ingredient of receipt.ingredients">
+                          <span class="px-2">* {{ingredient}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="fw-bolder text-warning">Preparation Steps:</span>
+                    <div *ngFor="let step of receipt.preparation">
+                      {{step}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+

@@ -1,0 +1,6 @@
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  padding: 0 30px;
+}

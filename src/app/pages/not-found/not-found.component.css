@@ -1,0 +1,17 @@
+.not-forund-container{
+  padding: 150px 0 50px;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: fantasy;
+}
+.not-found-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26vh;
+}
+.not-found-404 h1{
+  font-size:120px;
+}
