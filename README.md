@@ -1,7 +1,10 @@
 # ENSITMWGROUPE
 
+## Description of the website 
+  MW Group E is a collaborative project developed by Team 
+  Rihab cherni, Manar Sassi, Ranime Sboui, Dorra ben nsira and Mariem Sayedi, 
+  aimed at providing a platform where food enthusiasts and home chefs can explore a wide variety of delicious recipes, share their culinary creations, and connect with a community of like-minded individuals passionate about cooking.
 ## Demonstration
-
   ### Home Page
   ![Image Alt Text](./src/assets/homePage.PNG)
   ![Image Alt Text](./src/assets/responsiveHomePage.PNG)
@@ -17,6 +20,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
+## Keywords
+  Angular, docker, git, gitub, Web development, teamWork, collaboration, Responsive design, Food lovers, Recipe sharing,...
+  
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
